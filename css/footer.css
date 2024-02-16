@@ -1,0 +1,255 @@
+:root {
+    --transition: 0.5s;
+    --color-one: #ff4838;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: goldenrod;
+}
+
+/* CONTAINER........................... */
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 760px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.main-title {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 50px 0 5px;
+    text-transform: capitalize;
+    font-size: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.main-title+p {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    opacity: 0.8;
+}
+
+.main-title::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background-color: var(--color-one);
+    right: 0;
+    bottom: 18px;
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    direction: rtl;
+    margin-top: 80px;
+    background-image: url(/E-Tourism/Images/ibis-slider6.jpeg);
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 90%);
+    z-index: -1;
+}
+
+footer .container {
+    padding: 60px 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+footer .description .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+
+
+
+
+
+footer .description p:first-of-type {
+    font-size: 13px;
+}
+
+footer .description p:last-of-type {
+    color: goldenrod  !important;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+footer .description h3 {
+    padding: 15px 0;
+    font-size: 25px;
+}
+
+footer .description ul {
+    display: flex;
+    align-items: center;
+}
+
+footer ul i {
+    background-color: goldenrod !important;
+    color: white;
+    width: 40px;
+    height: 40px;
+    padding: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid goldenrod !important;
+    transition: var(--transition);
+}
+
+footer ul i:hover {
+    background-color: transparent !important;
+    color: goldenrod !important;
+}
+
+.text-footer {
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    font-size: 25px;
+}
+
+footer .quick-links ul a {
+    display: block;
+    color: white;
+    text-transform: capitalize;
+    padding-bottom: 15px;
+    transition: var(--transition);
+    position: relative;
+}
+
+footer .quick-links ul a::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color:goldenrod !important;
+    right: -12px;
+    top: 8px;
+    display: none;
+}
+
+footer .quick-links ul a:hover::before {
+    display: block;
+    transform: translateX(5px);
+}
+
+footer .quick-links ul a:hover {
+    color: goldenrod !important;
+    padding-right: 13px;
+}
+
+footer .contact-us>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+ 
+}
+
+footer .contact-us>div i {
+    margin-left: 20px;
+    font-size: 21px;
+    color: goldenrod !important;
+}
+
+footer .contact-us .location i {
+    margin-left: 25px;
+    padding-right: 2px;
+}
+
+footer .gallery .images {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px 5px;
+}
+
+footer .gallery .images img {
+    width: 85px;
+    height: 60px;
+    border-radius: 5px;
+}

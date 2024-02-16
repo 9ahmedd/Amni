@@ -1,0 +1,151 @@
+.body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #23E3C9; */
+}
+
+.slider {
+    width: 1200px;
+    height: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+@media(max-width:992px) {
+    .slider {
+        width: 100%;
+    }
+}
+
+.slides {
+    width: 500%;
+    height: 600px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 1200px;
+    /* max-width: 100%; */
+    height: 600px;
+    /* max-height: 100vh; */
+}
+
+.navigation-manual {
+    position: absolute;
+    width: 1200px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+@media(max-width:992px) {
+    .navigation-manual{
+        width: 100%;
+    }
+}
+
+.manual-btn {
+    border: 2px solid goldenrod;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: goldenrod;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -20%;
+}
+
+#radio3:checked~.first {
+    margin-left: -40%;
+}
+
+#radio4:checked~.first {
+    margin-left: -60%;
+}
+
+#radio5:checked~.first {
+    margin-left: -80%;
+}
+
+#radio6:checked~.first {
+    margin-left: -100%;
+}
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 1200px;
+    justify-content: center;
+    margin-top: 560px;
+}
+@media(max-width:992px) {
+    .navigation-auto {
+        width: 100%;
+    }
+}
+
+.navigation-auto div {
+    border: 2px solid goldenrod;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background: goldenrod;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background: goldenrod;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background: goldenrod;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background: goldenrod;
+}
+
+#radio5:checked~.navigation-auto .auto-btn5 {
+    background: goldenrod;
+}
+
+#radio6:checked~.navigation-auto .auto-btn6 {
+    background: goldenrod;
+}
+
+@media(max-width:992px) {
+    .slider img {
+        width:100%
+    }
+
+}
